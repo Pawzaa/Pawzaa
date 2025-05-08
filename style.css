@@ -313,11 +313,9 @@ nav a:hover {
     font-size: 1.2rem;
   }
 }
-.hero {
-  background-image: url('images/banner.png');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 6rem 2rem;
-  text-align: center;
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
