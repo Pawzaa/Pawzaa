@@ -2,42 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Affiliate Store</title>
+  <title>Pawzaa</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Pawzaa is your trusted source for pet toys, food, and accessories. Curated with care.">
+<meta name="keywords" content="pet store, dog toys, cat food, pet accessories, Pawzaa">
+<meta name="author" content="Pawzaa">
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+</style>
+<meta name="google-site-verification" content="XGDgGaAnX8-nnXfSufSvnU0OhkhkobGH8Psx5bGrJ9I" />
 </head>
 <body>
+
+  
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>  
   <header>
-    <img src="pawzaalogo.jpeg" alt="My Store Logo" class="logo">
-    <h1>Welcome to My Store!</h1>
-    <p>Click a product to buy from our partners</p>
-  </header>  
-
-  <section class="products">
-    <div class="product">
-      <img src="https://via.placeholder.com/150" alt="Product 1">
-      <h2>Cool Product 1</h2>
-      <p>This is a great product you'll love!</p>
-      <a href="https://affiliate-link-1.com" target="_blank">Buy Now</a>
+    <img src="logo.png" alt="Pawzaa Logo" class="logo">
+    <h1>Pawzaa</h1>
+  </header>
+  <div class="filters">
+    <button onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('Toys')">Toys</button>
+    <button onclick="filterProducts('Food')">Food</button>
+    <button onclick="filterProducts('Accessories')">Accessories</button>
+  </div>
+  <section>
+    <h2>New Arrivals</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://via.placeholder.com/250x200?text=New+Dog+Toy" alt="New Dog Toy">
+        <h2>Interactive Dog Ball</h2>
+        <p>Self-moving toy ball for energetic pups.</p>
+        <a href="https://your-affiliate-link.com/ball" target="_blank">Buy Now</a>
+      </div>
     </div>
-
-    <div class="product">
-      <img src="https://via.placeholder.com/150" alt="Product 2">
-      <h2>Cool Product 2</h2>
-      <p>Another awesome item for your needs.</p>
-      <a href="https://affiliate-link-2.com" target="_blank">Buy Now</a>
-    </div>
-    <div class="product">
-      <img src="https://via.placeholder.com/150" alt="Product 2">
-      <h2>Cool Product 2</h2>
-      <p>Another awesome item for your needs.</p>
-      <a href="https://affiliate-link-2.com" target="_blank">Buy Now</a>
-    </div>
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1" alt="Product 2">
-      <h2>Awesome Headphones</h2>
-      <p>Super comfy, amazing sound quality.</p>
-      <a href="https://your-affiliate-link.com/headphones" target="_blank">Buy Now</a>
-    </div>    
   </section>
+  
+  <main>
+    <section>
+      <h2>Toys</h2>
+      <div class="product-grid">
+        <!-- Add product divs for toys here -->
+        <div class="product">
+          <img src="https://via.placeholder.com/250x200?text=Dog+Chew+Toy" alt="Dog Chew Toy">
+          <h2>Dog Chew Toy</h2>
+          <p>Durable rubber toy for heavy chewers.</p>
+          <a href="https://your-affiliate-link.com/chewtoy" target="_blank">Buy Now</a>
+        </div>  
+      </div>
+    </section>
+  
+    <section>
+      <h2>Food</h2>
+      <div class="product-grid">
+        <!-- Add product divs for food here -->
+        <div class="product">
+          <img src="https://via.placeholder.com/250x200?text=Cat+Food+Premium" alt="Cat Food Premium">
+          <h2>Premium Cat Food</h2>
+          <p>Grain-free, vet-approved, 3kg bag.</p>
+          <a href="https://your-affiliate-link.com/catfood" target="_blank">Buy Now</a>
+        </div>
+      </div>
+    </section>
+  
+    <section>
+      <h2>Accessories</h2>
+      <div class="product-grid">
+        <!-- Add product divs for accessories here -->
+        <div class="product">
+          <img src="https://via.placeholder.com/250x200?text=Pet+Carrier" alt="Pet Carrier">
+          <h2>Travel Pet Carrier</h2>
+          <p>Comfortable, collapsible carrier for small pets.</p>
+          <a href="https://your-affiliate-link.com/carrier" target="_blank">Buy Now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Pawzaa. All rights reserved.</p>
+  </footer>
+  <script>
+    function filterProducts(category) {
+      const sections = document.querySelectorAll('main section');
+      sections.forEach(sec => {
+        if (category === 'all' || sec.querySelector('h2').textContent === category) {
+          sec.style.display = 'block';
+        } else {
+          sec.style.display = 'none';
+        }
+      });
+    }
+  </script>
+  
 </body>
 </html>

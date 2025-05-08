@@ -1,64 +1,183 @@
-:root {
-  --main-color: #A8D5BA;
-  --secondary-color: #ffffff;
-  --text-color: #333;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #ffffff;
+  color: #333;
+}
+nav {
+  background-color: white;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-body {
-  font-family: Arial, sans-serif;
+nav ul {
+  list-style: none;
   margin: 0;
   padding: 0;
-  background: var(--secondary-color);
-  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #A8D5BA;
+}
+
+
 header {
-  background-color: var(--main-color);
-  color: var(--text-color);
+  background-color: #A8D5BA;
   padding: 20px;
   text-align: center;
 }
 
 .logo {
-  height: 60px;
-  margin-bottom: 10px;
+  max-width: 120px;
+  display: block;
+  margin: 0 auto 10px;
 }
 
-.products {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+h1 {
+  margin: 0;
+  color: white;
+  font-size: 2rem;
+}
+
+main {
   padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
 .product {
-  background: var(--secondary-color);
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  background-color: #f7f7f7;
+  border-radius: 12px;
   padding: 15px;
-  width: 250px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   text-align: center;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
   transition: transform 0.2s ease;
 }
 
 .product:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
 .product img {
   width: 100%;
-  border-radius: 5px;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product h2 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+}
+
+.product p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
 }
 
 .product a {
   display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
-  background: var(--main-color);
-  color: var(--text-color);
+  background-color: #A8D5BA;
+  color: white;
+  padding: 10px 16px;
   text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.product a:hover {
+  background-color: #91c7aa;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #A8D5BA;
+  color: white;
+  margin-top: 40px;
+}
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  color: #A8D5BA;
+  border-bottom: 2px solid #A8D5BA;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.filters {
+  text-align: center;
+  margin: 20px 0;
+}
+.filters button {
+  background-color: #A8D5BA;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.filters button:hover {
+  background-color: #91c7aa;
+}
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+button {
+  background-color: #A8D5BA;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #91c7aa;
+}
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  form {
+    padding: 0 15px;
+  }
 }
